@@ -1,88 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
-        <script>
-            
-            function computerPlay(){
-                return Math.round(Math.random() * 2);
-            }
-            
-            function play(playerSelection , computerSelection){
-                var message = "";
-                if(playerSelection == 0){
-                    if(computerSelection == 0){
-                        message = "draw";
-                    }
-                    else if(computerSelection == 1){
-                        message = "lost";
-                    }
-                    else if(computerSelection == 2){
-                        message = "won";
-                    }
-                }
+        <div class="heading"><p>R P S</p></div>
 
-                else if(playerSelection == 1){
-                    if(computerSelection == 0){
-                        message = "won";
-                    }
-                    else if(computerSelection == 1){
-                        message = "draw";
-                    }
-                    else if(computerSelection == 2){
-                        message = "lost";
-                    }
-                }
+         <div class = "buttonGroup">
+             <button class = "button" id="scissor"><img src = "./images/scissor.jpg"></button>
+             <button class = "button" id="paper"><img src = "./images/paper.jpg"></button>
+             <button class = "button" id="rock"><img src = "./images/kisspng-graphic-design-rock-vector-5adccbaae5dac7.5970431315244194989415.jpg"></button>
+         </div>
+        
+         <div class = "status">
+             <div></div>
+             <h2 id = "statusText">STATUS</h2>
+             <div></div>
+         </div>
+        
+         <div class="buttonGroup" >
+             <button class = "button"><img src = "./images/scissor.jpg" id = "compPly"></button>
+         </div>
 
-                else if(playerSelection == 2){
-                    if(computerSelection == 0){
-                        message = "lost";
-                    }
-                    else if(computerSelection == 1){
-                        message = "won";
-                    }
-                    else if(computerSelection == 2){
-                        message = "draw";
-                    }
-                }
-                return message;
-            }   
-
-            function game(){
-                var winCount = 0;
-                var user_inp = "";
-                var choice = 0;
-                var curr_game = "";
-
-                for(var i = 0 ; i < 5 ; i++){
-
-                    user_inp = prompt("Enter your choice");
-                    user_inp.toLowerCase();
-
-                    if(user_inp == "paper"){
-                        choice = 0;
-                    }else if(user_inp == "rock"){
-                        choice = 1;
-                    }else if(user_inp == "scissor"){
-                        choice = 2;
-                    }
-                    
-                    curr_game = play(choice,computerPlay());
-                    console.log(`Last game : ${curr_game}`);
-                    if(curr_game == "won"){
-                        winCount++;
-                    }
-
-
-                }
-
-                console.log(`Won ${winCount} times`);
-            }
-
-            game();
-        </script>
+         
+        <script src = "./script/mainScr.js"></script>
     </body>
 </html>
