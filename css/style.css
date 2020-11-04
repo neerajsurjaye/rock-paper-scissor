@@ -26,7 +26,8 @@ body{
 }
 
 .button:hover{
-    box-shadow:0 0 40px  #0097a7;
+    box-shadow:0 0 40px  #f5ca56;
+    border: 10px solid #f5ca56;
 }
 
 .status{
@@ -83,8 +84,12 @@ body{
     margin: 0;
     margin-left: 20px;
 }
+/*
 
-@media(min-width:730px){
+@media only screen and (max-width: 900px){
+    body{
+        background-color: bisque;
+    }
     .button{
         height: 15rem;
         width: 15rem;
